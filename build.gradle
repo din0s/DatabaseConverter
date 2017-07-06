@@ -1,0 +1,24 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '1.2.4'
+    id 'application'
+    id 'java'
+}
+
+group 'DinosParkour'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.json:json:20170516'
+    compile 'org.mariadb.jdbc:mariadb-java-client:2.0.3'
+//    compile 'org.apache.commons:commons-lang3:3.6'
+
+}
+
+mainClassName = 'me.dinos.App'
+compileJava.options.encoding = 'UTF-8'
+shadowJar.archiveName = 'Converter.jar'
